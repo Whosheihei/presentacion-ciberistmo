@@ -5,41 +5,260 @@ A creative space about me.
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>~ Mi Rincón Digital ✨</title>
-    <link rel="stylesheet" href="estilos.css">
+    <title>✨ Mi Perfil Tech Cute</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: radial-gradient(circle at top left, #ffe4f0 0%, #e8f0ff 45%, #fff5fb 100%);
+            min-height: 100vh;
+            color: #374151;
+            line-height: 1.7;
+        }
+
+        .contenedor {
+            max-width: 780px;
+            margin: 0 auto;
+            padding: 40px 24px;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px 50px;
+            position: relative;
+        }
+
+        .pixel-cat {
+            font-size: 52px;
+            display: inline-block;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+
+        h1 {
+            font-size: 2.3rem;
+            color: #be185d;
+            margin-bottom: 8px;
+        }
+
+        .subtitulo {
+            font-family: 'JetBrains Mono', monospace;
+            color: #ec4899;
+            font-size: 1rem;
+        }
+
+        .tagline {
+            margin-top: 12px;
+            color: #6b7280;
+            font-size: 1rem;
+            max-width: 520px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .tarjeta {
+            background: #ffffff;
+            border-radius: 18px;
+            padding: 32px;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 22px rgba(236, 72, 153, 0.15);
+            border: 1px solid rgba(249, 168, 212, 0.35);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tarjeta:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 28px rgba(236, 72, 153, 0.2);
+        }
+
+        h2 {
+            font-size: 1.3rem;
+            color: #db2777;
+            margin-bottom: 18px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        p {
+            margin-bottom: 12px;
+        }
+
+        .lista-habilidades {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 8px;
+        }
+
+        .habilidad {
+            background: linear-gradient(135deg, #fce7f3, #f3e8ff);
+            color: #be185d;
+            padding: 7px 16px;
+            border-radius: 24px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .proyecto {
+            margin-bottom: 16px;
+            padding-left: 16px;
+            border-left: 3px solid #f9a8d4;
+        }
+
+        .proyecto h3 {
+            font-size: 1.05rem;
+            color: #1f2937;
+        }
+
+        .proyecto p {
+            font-size: 0.9rem;
+            color: #6b7280;
+            margin-bottom: 0;
+        }
+
+        .contacto-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+            color: #4b5563;
+        }
+
+        .contacto-item a {
+            color: #ec4899;
+            text-decoration: none;
+        }
+
+        .contacto-item a:hover {
+            text-decoration: underline;
+        }
+
+        .terminal-note {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+            color: #9ca3af;
+            margin-top: 18px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #9ca3af;
+            font-size: 0.85rem;
+        }
+
+        .decor {
+            position: absolute;
+            opacity: 0.55;
+            font-size: 22px;
+            pointer-events: none;
+        }
+
+        @media (max-width: 600px) {
+            .contenedor {
+                padding: 20px 16px;
+            }
+            .tarjeta {
+                padding: 24px;
+            }
+            h1 {
+                font-size: 1.9rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <div class="terminal-card">
-            <!-- Barra superior -->
-            <div class="terminal-header">
-                <div class="circles">
-                    <div class="c rojo"></div>
-                    <div class="c amarillo"></div>
-                    <div class="c verde"></div>
-                </div>
-                <span class="titulo">💻 ~ mi-perfil — bash</span>
-            </div>
 
-            <!-- Cuerpo -->
-            <div class="cuerpo" id="pantalla">
-                <div class="bienvenida">
-                    <span class="arte">✿ ┌─────────────────────┐</span><br>
-                    <span class="arte">✿ │  ¡HOLA! SOY YO ✨   │</span><br>
-                    <span class="arte">✿ └─────────────────────┘</span><br><br>
-                    <p>Escribe <strong>comandos</strong> para conocerme mejor 💫</p>
-                    <p class="sugerencia">Prueba: <em>sobre_mi</em> | <em>estudios</em> | <em>proyectos</em> | <em>habilidades</em> | <em>contacto</em> | <em>ayuda</em></p>
-                </div>
-            </div>
+    <div class="contenedor">
+        <!-- Cabecera -->
+        <header>
+            <div class="pixel-cat">🐱</div>
+            <h1>[Tu Nombre Completo]</h1>
+            <p class="subtitulo">estudiante &nbsp;·&nbsp; aprendiz &nbsp;·&nbsp; creadora</p>
+            <p class="tagline">✨ Apasionada por la tecnología, el código y los detalles bonitos. Bienvenid@ a mi espacio digital 💻</p>
+        </header>
 
-            <!-- Línea de entrada -->
-            <div class="entrada-linea">
-                <span class="prompt">🌸 yo@terminal:~$</span>
-                <input type="text" id="texto-entrada" autofocus autocomplete="off" placeholder="Escribe aquí...">
+        <!-- Sobre Mí -->
+        <section class="tarjeta">
+            <h2>🌸 Sobre Mí</h2>
+            <p>¡Hola! Soy <strong>[Tu Nombre]</strong>, una estudiante entusiasta de Panamá 🇵🇦 que ama descubrir cómo funcionan las cosas.</p>
+            <p>Me gusta combinar el orden de los números con la creatividad de la tecnología. Disfruto aprender algo nuevo cada día y compartir lo que sé con quienes me rodean 💛</p>
+            <p class="terminal-note">// En mi tiempo libre: aprendo código, exploro herramientas nuevas y colecciono momentos cute</p>
+        </section>
+
+        <!-- Estudios -->
+        <section class="tarjeta">
+            <h2>📚 Estudios</h2>
+            <p><strong>🎓 [Tu escuela / grado]</strong></p>
+            <p>📖 Mis materias favoritas incluyen contabilidad, informática e inglés. Me ayudan a ver el mundo desde diferentes perspectivas y a ser más organizada y precisa.</p>
+            <p class="terminal-note">// Objetivo: seguir aprendiendo, crear proyectos útiles y mejorar cada día</p>
+        </section>
+
+        <!-- Habilidades -->
+        <section class="tarjeta">
+            <h2>💻 Lo que sé hacer</h2>
+            <p>Estoy construyendo mi camino en el mundo digital paso a paso:</p>
+            <div class="lista-habilidades">
+                <span class="habilidad">HTML & CSS</span>
+                <span class="habilidad">Pensamiento lógico</span>
+                <span class="habilidad">Cálculo y contabilidad</span>
+                <span class="habilidad">Resolución de problemas</span>
+                <span class="habilidad">Trabajo en equipo</span>
+                <span class="habilidad">Aprendizaje rápido</span>
+                <span class="habilidad">GitHub Pages</span>
+                <span class="habilidad">Diseño básico</span>
             </div>
-        </div>
+        </section>
+
+        <!-- Proyectos -->
+        <section class="tarjeta">
+            <h2>🚀 Mis Proyectos</h2>
+            <div class="proyecto">
+                <h3>💰 Calculadora de Horas Extras</h3>
+                <p>Herramienta práctica para calcular salarios y recargos laborales — útil y sencilla.</p>
+            </div>
+            <div class="proyecto">
+                <h3>💻 Mi Rincón Digital</h3>
+                <p>¡Esta misma página! Mi primer espacio en la web para presentarme.</p>
+            </div>
+            <div class="proyecto">
+                <h3>✨ En camino...</h3>
+                <p>Siempre explorando nuevas ideas y aprendiendo más sobre programación y diseño.</p>
+            </div>
+        </section>
+
+        <!-- Contacto -->
+        <section class="tarjeta">
+            <h2>💌 Conectemos</h2>
+            <div class="contacto-item">
+                📧 <strong>Email:</strong> <a href="mailto:[tu-correo@ejemplo.com]">[tu-correo@ejemplo.com]</a>
+            </div>
+            <div class="contacto-item">
+                🔗 <strong>GitHub:</strong> <a href="https://github.com/[tu-usuario]" target="_blank">github.com/[tu-usuario]</a>
+            </div>
+            <div class="contacto-item">
+                📍 <strong>Ubicación:</strong> Panamá 🇵🇦
+            </div>
+        </section>
+
+        <!-- Pie de página -->
+        <footer>
+            ✨ Creado con cariño por [Tu Nombre] · © 2026
+        </footer>
     </div>
 
-    <script src="script.js"></script>
 </body>
 </html>
